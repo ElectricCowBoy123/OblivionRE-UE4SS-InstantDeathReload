@@ -12,3 +12,5 @@ Reloads the game instantly on death, requires UE4SS.
 
 # Support:
 For any issues or feedback, please don't hesistate to reach out to me.
+
+https://www.nexusmods.com/oblivionremastered/mods/2878

@@ -1,6 +1,6 @@
 Reloads the game instantly on death, requires UE4SS.
 
-#Installation 
+# Installation 
 - Requirements: This mod requires UE4SS for Oblivion Remastered.
 - Download: Download "InstantDeathReload.zip".
 - Extract: Extract the contents of the zip file.

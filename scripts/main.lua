@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-RegisterHook("/Script/Altar.VMainMenuViewModel:LoadInstanceOfLevels", function(Context)
-	local mainMenuViewModelm = FindFirstOf("VMainMenuViewModel")
-	local isContinue = mainMenuViewModelm:GetContinueVisibility()
-	if isContinue then
-		mainMenuViewModelm:RegisterSendClickedContinue()
+RegisterHook("/Script/Altar.VPairedPawn:DoRagdoll", function(Context)
+    local objRaggedActor = Context:get()
+    if (objRaggedActor:IsPlayerCharacter()) then
+		if (objRaggedActor:IsDead() or objRaggedActor:IsDeadFromKilled()) then
+			local objPlayerController = FindFirstOf("VAltarPlayerController")
+			objPlayerController:RequestQuickLoad()
+		end
 	end
-=======
-RegisterHook("/Script/Altar.VPairedPawn:OnCombatHitTaken", function(Context)
-	local actor=Context:get()
-	local isDead = actor:IsDead()
-	if isDead then
-		local playerController = FindFirstOf("VAltarPlayerController")
-		playerController:RequestQuickLoad()
-	end	
->>>>>>> 210f30a (initial commit)
 end)
